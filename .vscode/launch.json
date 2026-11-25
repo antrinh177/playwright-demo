@@ -1,0 +1,26 @@
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Cucumber Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register",
+        "${workspaceFolder}/node_modules/@cucumber/cucumber/bin/cucumber-js",
+        "--config",
+        "src/test/cucumber.json"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "ENV": "prod"
+      },
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
