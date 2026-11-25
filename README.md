@@ -16,18 +16,13 @@ This project uses Playwright, Cucumber, and TypeScript to run browser-based test
 
 ## Setup
 
-Install the project dependencies and the current configured browser (Firefox):
-
-```bash
-npm ci
-npx playwright install firefox
-```
+Install the project dependencies and the current configured browser (Chrome)
 
 The application and browser settings are in `src/helper/env/.env.prod`:
 
 ```dotenv
 BASEURL=https://www.saucedemo.com/
-BROWSER=firefox
+BROWSER=chrome
 ```
 
 The environment loader currently supports only `prod`. `BROWSER` can be `chrome`, `firefox`, or `webkit`; `chrome` uses Playwright's Chromium browser. Because dotenv is configured with `override: true`, values in `.env.prod` take precedence over matching values set in the shell or VS Code launch configuration.
