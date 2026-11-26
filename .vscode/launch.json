@@ -12,7 +12,9 @@
         "ts-node/register",
         "${workspaceFolder}/node_modules/@cucumber/cucumber/bin/cucumber-js",
         "--config",
-        "src/test/cucumber.json"
+        "src/test/cucumber.json",
+        "--tags",
+        "@test1"
       ],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",

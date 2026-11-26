@@ -25,7 +25,7 @@ export class LoginPage {
     }
 
     async enterUsername(username: string){
-        //await this.usernameInput.fill(username);
+        await this.usernameInput.fill(username);
     }
 
     async enterPassword(password: string){
