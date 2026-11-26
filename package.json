@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "pretest": "npx ts-node src/helper/init.ts",
-    "test": "cucumber-js --config src/test/cucumber.json",
-    "posttest": "npx ts-node src/helper/report.ts",
-    "test:failed": "cucumber-js --config src/test/cucumber.json -p rerun @rerun.txt"
+    "test": "npx ts-node src/helper/runTests.ts",
+    "pretest:failed": "npx ts-node src/helper/init.ts",
+    "test:failed": "npx ts-node src/helper/runTests.ts -p rerun @rerun.txt"
   },
   "keywords": [],
   "author": "",

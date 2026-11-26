@@ -59,12 +59,12 @@ For Playwright's Inspector, temporarily add `await page.pause()` at the point wh
 
 ## Reports and artifacts
 
-Running `npm test` executes the `pretest`, `test`, and `posttest` scripts:
+Running `npm test` executes the `pretest` and `test` scripts:
 
 - `pretest` prepares the `test-results` directory.
 - Cucumber writes `test-results/cucumber-report.html` and `test-results/cucumber-report.json`.
 - Cucumber writes failed scenario locations to `@rerun.txt`.
-- `posttest` generates the combined Multiple Cucumber HTML report as `index.html` in the project root, with supporting report files under `features/`.
+- The test runner generates the combined Multiple Cucumber HTML report as `index.html` in the project root.
 - Failed scenarios have screenshots saved under `test-results/screenshots/` and attached to the Cucumber result.
 
 ## Project layout

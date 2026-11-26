@@ -1,9 +1,11 @@
 const fs = require("fs-extra");
 
-try {
-    fs.ensureDir("test-results");
-    fs.emptyDir("test-results");
-
-} catch (error){
-    console.log("Folder not created! " + error);
+async function initialize(): Promise<void> {
+    await fs.ensureDir("test-results");
+    await fs.emptyDir("test-results");
 }
+
+initialize().catch((error: unknown) => {
+    console.error("Failed to prepare test-results directory:", error);
+    process.exitCode = 1;
+});
