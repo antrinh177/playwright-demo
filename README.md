@@ -69,7 +69,8 @@ Running `npm test` executes the `pretest`, `test`, and `posttest` scripts:
 
 ## Project layout
 
-```
+``` 
+test/
 src/
   helper/
     browsers/       Browser selection and launch
